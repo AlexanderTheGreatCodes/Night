@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+import Firebase
 
 @main
 struct NGHTLFEApp: App {
     @StateObject var userManager = UserManager()
+    
+    init() {
+        FirebaseApp.configure()
+    }
     
     var body: some Scene {
         WindowGroup {
